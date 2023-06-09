@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+ b1 = document.getElementById("start");
+ b2 = document.getElementById("stop");
+ b3 = document.getElementById("pause");
+ t = document.getElementById("timer");
+ c = -1; myInterval = -1;
+function count()
+{ 
+ if(myInterval==-1)
+ {
+ myInterval=setInterval(counter,1000);
+ function counter()
+ {c++;t.innerHTML = c;}
+ }
+}
+function pauser()
+{if(myInterval>0)
+  {clearInterval(myInterval); myInterval=-1;}
+} 
+function stopper()
+{clearInterval(myInterval);
+ c=0;
+ myInterval=setInterval(counter,1000);
+ function counter()
+ {c++;timer.innerHTML = c;}
+}  
+</script> 
+<body>
+<h1 id="timer"></h1>
+<input type="button" value="Start" id="start" onclick="count()"> 
+<input type="button" value="Stop"  id="stop" onclick="stopper()">
+<input type="button" value="Pause" id="pause" onclick="pauser()">     
+</body>
+</html>

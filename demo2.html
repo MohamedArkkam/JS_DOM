@@ -1,0 +1,14 @@
+<script>
+i=5;
+v = setInterval(nxt, 1000);
+function nxt()
+{
+let d = new Date();
+document.write(""+d.getSeconds());
+i--;
+if(i<0)
+{
+clearInterval(v);
+}
+}
+</script>

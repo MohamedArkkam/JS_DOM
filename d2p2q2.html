@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<script>
+function check()
+{
+var sel = document.getElementById("all");
+var it1 = document.getElementById("i1");
+var it2 = document.getElementById("i2");
+
+ if(sel.checked==true) 
+ { 
+ it1.checked=true; 
+ it2.checked=true; 
+ } 
+ else 
+ { 
+ it1.checked=false; 
+ it2.checked=false; 
+ } 
+}
+</script> 
+<input type="checkbox" id="all" onclick="check()">Select All<br><hr>
+<input type="checkbox" name="chk" id="i1">Item 1<br>  
+<input type="checkbox" name="chk" id="i2">Item 2   
+</body>
+</html>

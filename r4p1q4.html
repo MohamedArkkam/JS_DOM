@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+let s1="listen";
+let s2="silent";
+boolean c=false;
+if(s1.length==s2.length)
+{
+for(let i=0;i<s1.length;i++)
+{
+ for(let j=0; j<s2.length;j++)
+ {
+  if(s1[i]==s2[j])
+  {
+  c=true;
+  break;
+  }
+ } 
+}
+if(c=true)
+{
+document.write(s1+" and "+s2+" are Anagram")
+}
+else
+{
+document.write("Not Anagram")
+}
+}
+else
+{
+document.write("Not Anagram")
+}
+</script>   
+</body>
+</html>
